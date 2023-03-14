@@ -43,7 +43,7 @@ const NavItem = ({ route }) => {
     <li>
       <Link
         href={route === "home" ? "/" : `/${route}`}
-        className={`cursor-pointer px-1 md:px-2 text-base md:text-lg lg:text-xl font-medium text-gray-900 capitalize border-b-4 border-transparent hover:text-gray-500 transition ${
+        className={`cursor-pointer px-1 md:px-2 text-base md:text-lg lg:text-xl font-medium text-gray-900 capitalize border border-b-4 border-t-0 border-r-0 border-l-0 hover:text-gray-500 transition ${
           ((router.pathname === "/" && route === "home") ||
             router.pathname === "/" + route) &&
           "border-blue-500"

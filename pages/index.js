@@ -90,9 +90,19 @@ export default function Home() {
         <>
           <div className="space-y-4">
             <h2 className="text-xl font-semibold text-black">Labeled Images</h2>
+            {Object.keys(images).length == 0 && (
+              <p className="font-semibold text-grey-800">
+                No images found. Please upload images on the{" "}
+                <Link href="login" className="text-blue-500 underline">
+                  upload page
+                </Link>{" "}
+                to begin.
+              </p>
+            )}
             {Object.keys(images).map((imageLabel) => (
               <>
                 <h3 className="text-lg">{imageLabel}</h3>
+
                 <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
                   {images[imageLabel] &&
                     images[imageLabel].map((imageImg) => (
@@ -108,6 +118,15 @@ export default function Home() {
           <hr />
           <div className="space-y-4">
             <h2 className="text-xl font-semibold text-black">Segmentations</h2>
+            {Object.keys(segmentations).length == 0 && (
+              <p className="font-semibold text-grey-800">
+                No segmentations found. Please segment images on the{" "}
+                <Link href="login" className="text-blue-500 underline">
+                  label page
+                </Link>{" "}
+                to begin.
+              </p>
+            )}
             {Object.keys(segmentations).map((segmentationLabel) => (
               <>
                 <h3 className="text-lg">{segmentationLabel}</h3>
