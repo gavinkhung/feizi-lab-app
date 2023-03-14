@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import { AuthContext } from "@/lib/AuthProvider";
 import { doc, getDoc } from "firebase/firestore";
+import Link from "next/link";
 import { useContext } from "react";
 import { db } from "../lib/firebase";
 
@@ -77,9 +78,12 @@ export default function Home() {
       </div>
       {!user ? (
         <>
-          <p className="font-bold text-green-800">
-            Please sign in to upload images to Google Cloud and segment the
-            images
+          <p className="font-bold text-grey-800">
+            Please{" "}
+            <Link href="login" className="text-blue-500 underline">
+              sign in
+            </Link>{" "}
+            to upload images to Google Cloud and segment the images
           </p>
         </>
       ) : (
