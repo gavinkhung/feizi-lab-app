@@ -93,7 +93,7 @@ export default function Home() {
             {Object.keys(images).length == 0 && (
               <p className="font-semibold text-grey-800">
                 No images found. Please upload images on the{" "}
-                <Link href="login" className="text-blue-500 underline">
+                <Link href="upload" className="text-blue-500 underline">
                   upload page
                 </Link>{" "}
                 to begin.
@@ -121,7 +121,7 @@ export default function Home() {
             {Object.keys(segmentations).length == 0 && (
               <p className="font-semibold text-grey-800">
                 No segmentations found. Please segment images on the{" "}
-                <Link href="login" className="text-blue-500 underline">
+                <Link href="label" className="text-blue-500 underline">
                   label page
                 </Link>{" "}
                 to begin.
